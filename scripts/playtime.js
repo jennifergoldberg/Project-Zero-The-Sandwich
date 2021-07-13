@@ -29,9 +29,9 @@
 
     1. make a sandwich class
     2. set name
-    -constructor this.name
-    -name namePrompt()
-    -append it to 
+    - this.name
+    - name namePrompt()
+    - append it to 
     3. set start game
     
     */

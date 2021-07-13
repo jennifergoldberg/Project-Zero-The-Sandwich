@@ -1,17 +1,17 @@
 * {
+    padding: 0;
+    margin: auto;
     box-sizing: border-box;
 }
 
 body {
-    padding: 0;
-    margin: auto;
     height: 10vh;
     width: 1024px;
 }
 
 header {
     background-color: azure;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 120px;
     align-items: center;
     margin-top: 20px;
@@ -25,7 +25,8 @@ main {
 
 #plate {
     height: 500px;
-    width: 500px;
+    width: 50vw;
+    max-width: 500px;
     background-color: whitesmoke;
     border-radius: 500px;
     margin: 40px;
@@ -39,8 +40,9 @@ main {
 footer {
     background-color: azure;
     height: 120px;
-    width: 1024px;
-    border-radius: 10px;
+    width: 100vw;
+    max-width: 1024px;
+    border-radius: 5px;
     position: fixed;
     margin-bottom: 20px;
 }
