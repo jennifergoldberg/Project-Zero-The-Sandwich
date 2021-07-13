@@ -25,12 +25,29 @@
         <h2>Today on the Menu:<span id="user-name"></span></h2>
     </header>
 
+    <div class="user-name">
+        <form action="text">
+            <label for=""></label>
+            <input type="text" id="enter-name">
+            <input type="submit" id="submit-name">
+        </form>
+    </div>
+
     <main>
         <div id="plate"></div>
         <div class="metrics">
-            <p>Hunger</p>
-            <p>Sleep</p>
-            <p>Boredom</p>
+            <div class="meter-feed">
+                <span></span>
+                <p>Hunger</p>
+            </div>
+            <div class="meter-ice">
+                <span></span>
+                <p>Sleep</p>
+            </div>
+            <div class="meter-slice">
+                <span></span>
+                <p>Boredom</p>
+            </div>
         </div>
     </main>
 

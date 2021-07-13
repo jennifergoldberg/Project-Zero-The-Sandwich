@@ -29,6 +29,10 @@ main {
     background-color: whitesmoke;
     border-radius: 500px;
     margin: 40px;
+}
+
+.metrics {
+    margin: 40px;
 
 }
 
