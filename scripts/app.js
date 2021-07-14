@@ -69,6 +69,7 @@ const game = {
     slicedScore: 10,
     ageScore: 0,
     time: null,
+    timer: null,
 
     sandoImgs: [
         {
