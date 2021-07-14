@@ -95,6 +95,12 @@ const game = {
         game.time = setInterval(game.reduceMetrics, 2000);
     },
 
+    metricsBottom(){
+        if (game.feedScore === 0 || game.slicedScore === 0 || game.icedScore === 0){
+            clearInterval(game.time);
+        }
+    },
+
 
     startSando(){
         console.log("click");
@@ -123,23 +129,23 @@ const game = {
 
     
     handleIce (){
-        const $iceCount = $("#iced-count");
+        const $icedCount = $("#iced-count");
         console.log("click");
         if (game.icedScore <= 9){
             console.log("game");
             game.icedScore++;
             };
-        $iceCount.text(` ${game.icedScore}`);
+        $icedCount.text(` ${game.icedScore}`);
     },
     
     handleSlice(){
-        const $sliceCount = $("#sliced-count");
+        const $slicedCount = $("#sliced-count");
         console.log("click");
         if (game.slicedScore <= 9){
             console.log("game");
             game.slicedScore++;
             };
-        $sliceCount.text(` ${game.slicedScore}`);
+        $slicedCount.text(` ${game.slicedScore}`);
     },
     
     handleAge(){
