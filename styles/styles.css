@@ -57,6 +57,10 @@ main {
     margin: 40px;
 }
 
+img {
+    height: 200px;
+}
+
 .metrics {
     margin-right: 400px;
 

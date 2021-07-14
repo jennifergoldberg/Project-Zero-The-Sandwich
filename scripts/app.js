@@ -104,7 +104,7 @@ const game = {
 
 
     metricsTimer(){
-        game.time = setInterval(game.reduceMetrics, 1000);
+        game.time = setInterval(game.reduceMetrics, 2000);
     },
 
     metricsBottom(){
@@ -166,20 +166,61 @@ const game = {
             console.log("aged");
         };
         $ageCount.text(` ${game.ageScore}`);
-            if (game.ageScore === 10 || game.ageScore === 20 || game.ageScore === 30){
+            if (game.ageScore % 10 === 0){
                 game.round++;
             };
         
     },
 
-    /*handleImg(){
-        const $img = $("#sando-img");
-        game.sandoImgs[0].append($img);
-        
+    clearScores(){
+        game.feedScore = 10;
+        game.icedScore = 10;  
+        game.slicedScore = 10;
+        $("#feed-count").text(` ${game.feedScore}`);
+        $("#iced-count").text(` ${game.icedScore}`);
+        $("#sliced-count").text(` ${game.slicedScore}`);
+    },
 
-    },*/
+    
 
 
+
+/*
+7. Every 10 times the "needs" reach 10, the user will see the sandwich age into a more mature sandwich
+    - The sandwich starts as a tea sandwich
+    - The first age will turn the sandwich into a club sandwich
+    - The second age will turn the sandwich into a submarine sandwich (hoagie)
+    - The "needs" increase in difficulty every time the sandwich matures 
+        - first need to clear the interval and the scores
+            -make a new function to clear the scores and set them back to 10
+        -alert user that it's the next round
+            - grab a elm from the dom
+            - create a new start button
+        - change the picture
+        - increase the difficulty 
+        - start the countdown again
+
+
+Increase Age every 2 min 
+
+*/
+
+
+/*
+8. If the user does not meet the "needs" of the sandwich, the sandwich will get modly and the game will be over
+    - The mold will appear as a filter over the sandwich at it's present state
+    - The user will be alerted of their failure with text that says "Game Over!"
+        - game stops
+        - mold will appear on the screen 
+        - grab game__over from the dom and append text 
+        - overlay text like we did with game rounds 
+9. The user wins the game by meeting the "needs" the submarine sandwich  
+    - if round === 4 
+    - game stops  
+    - grab game__won from the dom and append text to it
+    - overlay the text like we did with the same start and the game rounds
+
+*/
 
 };
     
