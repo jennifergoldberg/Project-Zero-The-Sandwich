@@ -88,22 +88,18 @@ const game = {
         console.warn("clicked");
         const $userInput = $("#user-name").val();
         console.log($userInput);
-        $("#sandwich-name").text($userInput);
+        $("#sandwich-name").text(" " + $userInput);
     },
 
 
-
     
-
-    $countFeedClick: $(".feed-count"),
-    
-    handleFeedMe(event){
-        const $countFeedClick = $(event.target)
-        if ($countFeedClick.hasClass("feed-count") === true && sandoGame.feedScore <= 10){
-            console.log($countFeedClick.hasClass("feed-count"));
-            sandoGame.feedScore++;
-            }
-        $(".feed-count").text(` ${sandoGame.feedScore}`);
+    handleFeed (){
+        const $feedCount = $(".feed-count")
+        if (game.feedScore <= 9){
+            console.log("game");
+            game.feedScore++;
+            };
+        $(".feed-count").text(` ${game.feedScore}`);
         },
 
     
@@ -115,7 +111,7 @@ const game = {
 $("#start-game").on("click", game.startSando);
 $("#submit-name").on("click", game.submitName);
     
-$("#feed").on("click", game.handleFeedMe);
+$("#feed").on("click", game.handleFeed);
 //$("#ice").on("click", game.startSando);
 //$("#slice").on("click", game.startSando);
 
