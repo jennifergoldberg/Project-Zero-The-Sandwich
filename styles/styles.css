@@ -9,6 +9,18 @@ body {
     width: 1024px;
 }
 
+.form-box {
+    background-color: thistle;
+    height: 50px;
+    width: 100px;
+    z-index: 1;
+}
+
+.form-after::after {
+
+
+}
+
 header {
     background-color: azure;
     border-radius: 5px;
@@ -21,6 +33,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 2;
 }
 
 #plate {
@@ -33,7 +46,7 @@ main {
 }
 
 .metrics {
-    margin: 40px;
+    margin-right: 400px;
 
 }
 

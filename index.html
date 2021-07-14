@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr. Sandwich</title>
     
-    <!--Normalize CSS -->
-    <link rel="stylesheet" href="normalize.css/">
+    <!--Normalize CSS 
+    <link rel="stylesheet" href="normalize.css/">-->
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -25,10 +25,14 @@
         <h2>Today on the Menu:<span id="user-name"></span></h2>
     </header>
 
-    <div class="form">
-        <label for="enter-sandwich-name">Enter a name for your Sandwich</label>
-        <input id="enter-name" type="text">
-        <input id="submit-name" type="submit" >
+    <div class="form-box">
+        <div class="form-after">
+            <div class="form">
+                <label for="enter-sandwich-name">Enter a name for your Sandwich</label>
+                <input id="enter-name" type="text">
+                <input id="submit-name" type="submit" >
+            </div>
+        </div> 
     </div>
 
     <main>
@@ -36,6 +40,7 @@
         <div class="sando-img">
             <div class></div>
         </div>
+
         <div class="metrics">
             <div class="meter-feed">
                 <span></span>
@@ -48,6 +53,10 @@
             <div class="meter-slice">
                 <span></span>
                 <p>Boredom 1-10: <span id="slice-count"></span></p>
+            </div>
+            <div class="meter-age">
+                <span></span>
+                <p>age 1-10: <span id="age-count"></span></p>
             </div>
         </div>
     </main>

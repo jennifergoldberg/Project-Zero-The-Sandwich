@@ -80,15 +80,17 @@ Your app must:
     - The Ice button will run the iceMe() that will put the sandwich to bed and adjust the progress bar for the sleepiness metrics 
 6. The user can see the "needs" of the sandwich in the progress bar
     - The sandwich's "needs" are rated 0-10, with 0 being the lowest and 10 the highest
-    - As the user presses the Feed, Slice, or Ice buttons, the progress bar will increase to a max of 10
+    - As the user presses the Feed, Slice, or Ice buttons, the progress bar will increase by 1 to a max of 10
     - The progress bar will reduce from 10 every 2s
-7. Every two minutes, the user will see the sandwich age into a more mature sandwich
+7. Every 10 times the "needs" reach 10, the user will see the sandwich age into a more mature sandwich
     - The sandwich starts as a tea sandwich
     - The first age will turn the sandwich into a club sandwich
     - The second age will turn the sandwich into a submarine sandwich (hoagie)
+    - The "needs" increase in difficulty every time the sandwich matures 
 8. If the user does not meet the "needs" of the sandwich, the sandwich will get modly and the game will be over
     - The mold will appear as a filter over the sandwich at it's present state
     - The user will be alerted of their failure with text that says "Game Over!" 
+9. The user wins the game by meeting the "needs" the submarine sandwich 
 
 
 
