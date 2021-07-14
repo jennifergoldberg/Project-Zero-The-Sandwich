@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 10vh;
+    height: 100vh;
     width: 1024px;
 }
 
@@ -25,8 +25,8 @@ header {
     background-color: azure;
     border-radius: 5px;
     height: 120px;
-    align-items: center;
     margin-top: 20px;
+
 }
 
 h1 {
@@ -53,7 +53,7 @@ main {
     width: 50vw;
     max-width: 500px;
     background-color: whitesmoke;
-    border-radius: 500px;
+    border-radius: 550px;
     margin: 40px;
 }
 
@@ -68,10 +68,15 @@ footer {
     width: 100vw;
     max-width: 1024px;
     border-radius: 5px;
-    position: fixed;
     margin-bottom: 20px;
+    position: absolute;
+    display: flex;
+    
+
 }
 
-.footer-buttons {
-    
+    #ice {
+    padding: 5px 20px;
+    margin: 20px;
+    color: pink;
 }
