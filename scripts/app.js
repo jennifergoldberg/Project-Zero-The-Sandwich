@@ -82,21 +82,22 @@ const game = {
     reduceMetrics(){
         console.log("hi");
         game.feedScore--;
-        game.icedScore--;
+        game.icedScore--;  
         game.slicedScore--;
         $("#feed-count").text(` ${game.feedScore}`);
         $("#iced-count").text(` ${game.icedScore}`);
         $("#sliced-count").text(` ${game.slicedScore}`);
+        game.metricsBottom();
 
     },
 
 
     metricsTimer(){
-        game.time = setInterval(game.reduceMetrics, 2000);
+        game.time = setInterval(game.reduceMetrics, 1000);
     },
 
     metricsBottom(){
-        if (game.feedScore === 0 || game.slicedScore === 0 || game.icedScore === 0){
+        if (game.feedScore === 0 || game.slicedScore === 0 || game.icedScore === 0) {
             clearInterval(game.time);
         }
     },
