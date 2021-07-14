@@ -80,6 +80,13 @@ const game = {
 
     reduceMetrics(){
         console.log("hi");
+        game.feedScore--;
+        game.icedScore--;
+        game.slicedScore--;
+        $("#feed-count").text(` ${game.feedScore}`);
+        $("#iced-count").text(` ${game.icedScore}`);
+        $("#sliced-count").text(` ${game.slicedScore}`);
+
     },
 
     startSando(){
@@ -134,6 +141,9 @@ const game = {
             console.log("aged");
         };
         $ageCount.text(` ${game.ageScore}`);
+        if (game.ageScore === 9){
+            game.round++;
+        }
     },
 
 
