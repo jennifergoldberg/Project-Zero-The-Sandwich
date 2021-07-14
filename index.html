@@ -20,20 +20,33 @@
 
 </head>
 <body>
+    <div class="card-box">
+        <div class="about-game">
+            <h2>Welcome to The Sandwich</h2>
+            <p>Click the buttons to take care of your sandwich and watch it age!</p>
+            <ol>
+                <li>Feed your Sandwich by clicking "Feed Me"</li>
+                <li>Play with your Sandwich by clicking "Slice Me"</li>
+                <li>Put your Sandwich to bed by clicking "Ice Me"</li>
+                <li>Keep an eye on the meter bars and don't let them reach zero!</li>
+            </ol>
+            <button id="start-game"></button>
+        </div>
+        
+        <div class="form-box">
+            <div class="form-after">
+                <div class="form">
+                    <label for="enter-name">Enter a name for your Sandwich</label>
+                    <input id="sandwich-name" type="text">
+                    <input id="submit-name" type="submit" >
+                </div>
+            </div> 
+    </div>
+
     <header>
         <h1>Welcome to The Sandwich</h1>
         <h2>Today on the Menu:<span id="user-name"></span></h2>
     </header>
-
-    <div class="form-box">
-        <div class="form-after">
-            <div class="form">
-                <label for="enter-sandwich-name">Enter a name for your Sandwich</label>
-                <input id="enter-name" type="text">
-                <input id="submit-name" type="submit" >
-            </div>
-        </div> 
-    </div>
 
     <main>
         <div id="plate"></div>
@@ -44,7 +57,7 @@
         <div class="metrics">
             <div class="meter-feed">
                 <span></span>
-                <p>Hunger 1-10:<span id="feed-count"></span> </p>
+                <p>Hunger 1-10:<span class="feed-count"></span> </p>
             </div>
             <div class="meter-ice">
                 <span></span>
