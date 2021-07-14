@@ -9,11 +9,11 @@ body {
     width: 1024px;
 }
 
-.form-box {
+.about-game .form-box {
     background-color: thistle;
-    height: 50px;
-    width: 100px;
-    z-index: 1;
+    height: 500px;
+    width: 500px;
+    z-index: 2;
 }
 
 .form-after::after {
@@ -45,7 +45,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 1;
 }
 
 #plate {
