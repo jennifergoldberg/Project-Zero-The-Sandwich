@@ -48,24 +48,52 @@
 
 /* 4. The user will "meet" their sandwich as a Tea Sandwich and the game will start
 - create a game object - done
-- add event listener "click" 
+- add event listener "click" for the submit button
+    -take the text entered and store it into a variable
+        -grab submit buttom from the dom
+        -create method to make the text a variable
+            -grab text from the dom
+    -get the h2 "today on the menu" from the dom
+    -put the text from the stored variable into the h2 
+- add event listerner "clcik" the start game button
+    - grab the crad-box from the dom 
+    - add a .css to the card-box to make is display:hidden
 - start method will log the start of the game and start counter
-    -create counter method
-    -attach it to the 
+    -create counter method to count down the meters every 2 seconds
+    -attach it to the start game button
 */
     
-const sandoGame = {
+const game = {
     round: 1,
     feedScore: 0,
     icedScore: 0,
     slicedScore: 0,
 
+    $cardBox: $(".card-box"),
 
-/*  startSando(event){
-       // console.log("click");
-        sandoGame.handleFeedMe();
+    handleHide(event){
+        $(event.target) = game.$cardBox;
+        game.$cardBox.css("display", "hidden");
+    },
 
-    },*/
+    startSando(event){
+        console.log("click");
+        game.handleHide();
+        
+
+    },
+
+
+    submitName(event){
+        console.warn("clicked");
+        $("#user-name").html(" " + event.target.value);
+        const $nameSubmit = $("#user-name");
+        $("#sandwich-name").append(`${$nameSubmit}`);
+    },
+
+
+
+    /* 
 
     $countFeedClick: $(".feed-count"),
     
@@ -78,15 +106,16 @@ const sandoGame = {
         $(".feed-count").text(` ${sandoGame.feedScore}`);
         },
 
-    
+    */
     
     
     };
     
     
+$("#start-game").on("click", game.startSando);
+$("#submit-name").on("click", game.submitName);
     
-    
-$("#feed").on("click", sandoGame.handleFeedMe);
-$("#ice").on("click", sandoGame.startSando);
-$("#slice").on("click", sandoGame.startSando);
+//$("#feed").on("click", game.handleFeedMe);
+//$("#ice").on("click", game.startSando);
+//$("#slice").on("click", game.startSando);
 
