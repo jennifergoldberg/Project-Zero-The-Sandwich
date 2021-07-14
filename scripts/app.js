@@ -79,7 +79,7 @@ const game = {
 
     },
 
-    reduceFeedMetrics(){
+    reduceMetrics(){
         console.log("hi");
         game.feedScore--;
         game.icedScore--;
@@ -90,14 +90,9 @@ const game = {
 
     },
 
-    reduceIcedMetrics(){
-        game.icedScore--;
-        $("#iced-count").text(` ${game.icedScore}`);
-    },
 
     metricsTimer(){
-        game.time = setInterval(game.reduceFeedMetrics, 2000);
-        game.time = setInterval(game.reduceIcedMetrics, 2000);
+        game.time = setInterval(game.reduceMetrics, 2000);
     },
 
 
@@ -128,7 +123,7 @@ const game = {
 
     
     handleIce (){
-        const $iceCount = $("#ice-count");
+        const $iceCount = $("#iced-count");
         console.log("click");
         if (game.icedScore <= 9){
             console.log("game");
@@ -138,7 +133,7 @@ const game = {
     },
     
     handleSlice(){
-        const $sliceCount = $("#slice-count");
+        const $sliceCount = $("#sliced-count");
         console.log("click");
         if (game.slicedScore <= 9){
             console.log("game");
@@ -172,10 +167,10 @@ $("#submit-name").on("click", game.submitName);
 $("#feed").on("click", game.handleFeed);
 $("#feed").on("click", game.handleAge);
 
-$("#ice").on("click", game.handleIce);
-$("#ice").on("click", game.handleAge);
+$("#iced").on("click", game.handleIce);
+$("#iced").on("click", game.handleAge);
 
-$("#slice").on("click", game.handleSlice);
-$("#slice").on("click", game.handleAge);
+$("#sliced").on("click", game.handleSlice);
+$("#sliced").on("click", game.handleAge);
 
 
