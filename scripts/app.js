@@ -68,22 +68,23 @@ const game = {
     icedScore: 0,
     slicedScore: 0,
 
-    //const $cardBox = $(".card-box"),
 
-    handleHide(event){
-        $(event.target) = game.$cardBox;
-        game.$cardBox.css("display", "hidden");
+    handleHide(){
+        const $gameBox = $(".about-game");
+        const $formBox = $(".form-box");
+        $gameBox.remove();
+        $formBox.remove();
+
     },
 
-    startSando(event){
+    startSando(){
         console.log("click");
         game.handleHide();
         
 
     },
 
-
-    submitName(event){
+    submitName(){
         console.warn("clicked");
         const $userInput = $("#user-name").val();
         console.log($userInput);
