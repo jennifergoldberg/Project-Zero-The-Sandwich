@@ -38,9 +38,8 @@
 
         -select button from dom
         -create a new method to handle the feedme button
-        -connect the start game method to new method
+        
 
-        -select span from dom and make a variable
         -create a function for the metric to add +1 for every "click"
         
         */
@@ -69,7 +68,7 @@ const game = {
     icedScore: 0,
     slicedScore: 0,
 
-    $cardBox: $(".card-box"),
+    //const $cardBox = $(".card-box"),
 
     handleHide(event){
         $(event.target) = game.$cardBox;
@@ -86,14 +85,14 @@ const game = {
 
     submitName(event){
         console.warn("clicked");
-        $("#user-name").html(" " + event.target.value);
-        const $nameSubmit = $("#user-name");
-        $("#sandwich-name").append(`${$nameSubmit}`);
+        const $userInput = $("#user-name").val();
+        console.log($userInput);
+        $("#sandwich-name").text($userInput);
     },
 
 
 
-    /* 
+    
 
     $countFeedClick: $(".feed-count"),
     
@@ -106,7 +105,7 @@ const game = {
         $(".feed-count").text(` ${sandoGame.feedScore}`);
         },
 
-    */
+    
     
     
     };
@@ -115,7 +114,7 @@ const game = {
 $("#start-game").on("click", game.startSando);
 $("#submit-name").on("click", game.submitName);
     
-//$("#feed").on("click", game.handleFeedMe);
+$("#feed").on("click", game.handleFeedMe);
 //$("#ice").on("click", game.startSando);
 //$("#slice").on("click", game.startSando);
 
