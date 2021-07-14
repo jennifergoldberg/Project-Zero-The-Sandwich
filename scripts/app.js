@@ -92,17 +92,25 @@ const game = {
     },
 
 
-    
     handleFeed (){
-        const $feedCount = $(".feed-count")
+        const $feedCount = $("#feed-count");
         if (game.feedScore <= 9){
             console.log("game");
             game.feedScore++;
             };
-        $(".feed-count").text(` ${game.feedScore}`);
+        $feedCount.text(` ${game.feedScore}`);
         },
 
     
+    handleIce (){
+        const $iceCount = $("#ice-count");
+        console.log("click");
+        if (game.icedScore <= 9){
+            console.log("game");
+            game.icedScore++;
+            };
+        $iceCount.text(` ${game.icedScore}`);
+    },
     
     
     };
@@ -112,6 +120,6 @@ $("#start-game").on("click", game.startSando);
 $("#submit-name").on("click", game.submitName);
     
 $("#feed").on("click", game.handleFeed);
-//$("#ice").on("click", game.startSando);
+$("#ice").on("click", game.handleIce);
 //$("#slice").on("click", game.startSando);
 
