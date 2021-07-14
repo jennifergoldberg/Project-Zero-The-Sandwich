@@ -67,6 +67,7 @@ const game = {
     feedScore: 0,
     icedScore: 0,
     slicedScore: 0,
+    ageScore: 0,
 
 
     handleHide(){
@@ -75,6 +76,10 @@ const game = {
         $gameBox.remove();
         $formBox.remove();
 
+    },
+
+    reduceMetrics(){
+        console.log("hi");
     },
 
     startSando(){
@@ -122,13 +127,32 @@ const game = {
         $sliceCount.text(` ${game.slicedScore}`);
     },
     
-    };
+    handleAge(){
+        const $ageCount = $("#age-count");
+        if (game.feedScore === 9 || game.slicedScore === 9 || game.icedScore === 9){
+            game.ageScore++;
+            console.log("aged");
+        };
+        $ageCount.text(` ${game.ageScore}`);
+    },
+
+
+
+
+
+};
     
     
 $("#start-game").on("click", game.startSando);
 $("#submit-name").on("click", game.submitName);
     
 $("#feed").on("click", game.handleFeed);
+$("#feed").on("click", game.handleAge);
+
 $("#ice").on("click", game.handleIce);
+$("#ice").on("click", game.handleAge);
+
 $("#slice").on("click", game.handleSlice);
+$("#slice").on("click", game.handleAge);
+
 
