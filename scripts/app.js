@@ -64,10 +64,11 @@
     
 const game = {
     round: 1,
-    feedScore: 0,
-    icedScore: 0,
-    slicedScore: 0,
+    feedScore: 10,
+    icedScore: 10,
+    slicedScore: 10,
     ageScore: 0,
+    time: null,
 
 
     handleHide(){
@@ -78,7 +79,7 @@ const game = {
 
     },
 
-    reduceMetrics(){
+    reduceFeedMetrics(){
         console.log("hi");
         game.feedScore--;
         game.icedScore--;
@@ -89,9 +90,21 @@ const game = {
 
     },
 
+    reduceIcedMetrics(){
+        game.icedScore--;
+        $("#iced-count").text(` ${game.icedScore}`);
+    },
+
+    metricsTimer(){
+        game.time = setInterval(game.reduceFeedMetrics, 2000);
+        game.time = setInterval(game.reduceIcedMetrics, 2000);
+    },
+
+
     startSando(){
         console.log("click");
         game.handleHide();
+        game.metricsTimer();
         
 
     },
