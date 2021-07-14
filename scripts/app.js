@@ -70,6 +70,17 @@ const game = {
     ageScore: 0,
     time: null,
 
+    sandoImgs: [
+        {
+            src:"https://c4.wallpaperflare.com/wallpaper/578/626/344/movie-spider-man-into-the-spider-verse-miles-morales-spider-man-hd-wallpaper-preview.jpg",
+            alt: "Miles Morales",
+        },
+        {
+            src:"https://i.ytimg.com/vi/yMYDRFzCCDw/maxresdefault.jpg",
+            alt:"spider pig",
+        },
+    ],
+
 
     handleHide(){
         const $gameBox = $(".about-game");
@@ -107,7 +118,6 @@ const game = {
         console.log("click");
         game.handleHide();
         game.metricsTimer();
-        
 
     },
 
@@ -156,12 +166,18 @@ const game = {
             console.log("aged");
         };
         $ageCount.text(` ${game.ageScore}`);
-        if (game.ageScore === 9){
-            game.round++;
-        }
+            if (game.ageScore === 10 || game.ageScore === 20 || game.ageScore === 30){
+                game.round++;
+            };
+        
     },
 
+    /*handleImg(){
+        const $img = $("#sando-img");
+        game.sandoImgs[0].append($img);
+        
 
+    },*/
 
 
 
