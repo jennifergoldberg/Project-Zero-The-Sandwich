@@ -112,6 +112,15 @@ const game = {
         $iceCount.text(` ${game.icedScore}`);
     },
     
+    handleSlice(){
+        const $sliceCount = $("#slice-count");
+        console.log("click");
+        if (game.slicedScore <= 9){
+            console.log("game");
+            game.slicedScore++;
+            };
+        $sliceCount.text(` ${game.slicedScore}`);
+    },
     
     };
     
@@ -121,5 +130,5 @@ $("#submit-name").on("click", game.submitName);
     
 $("#feed").on("click", game.handleFeed);
 $("#ice").on("click", game.handleIce);
-//$("#slice").on("click", game.startSando);
+$("#slice").on("click", game.handleSlice);
 
