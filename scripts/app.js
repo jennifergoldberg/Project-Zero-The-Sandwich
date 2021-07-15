@@ -13,7 +13,7 @@
     - The sandwich's "needs" are rated 0-10, with 0 being the lowest and 10 the highest
     - As the user presses the Feed, Slice, or Ice buttons, the progress bar will increase to a max of 10
     - The progress bar will reduce from 10 every 2s
-7. Every 10 times the "needs" reach 10, the user will see the sandwich age into a more mature sandwich
+7. Every 1 minute, the user will see the sandwich age into a more mature sandwich
     - The sandwich starts as a tea sandwich
     - The first age will turn the sandwich into a club sandwich
     - The second age will turn the sandwich into a submarine sandwich (hoagie)
@@ -103,6 +103,17 @@ const game = {
 
     },
 
+    ageSando(){
+        console.log("working");
+        const $ageCount = $("#age-count");
+        game.ageScore++;
+        $ageCount.text(` ${game.ageScore}`);
+    },
+
+    ageTimer(){
+        game.timer = setInterval(game.ageSando, 60000);
+    },
+
 
     metricsTimer(){
         game.time = setInterval(game.reduceMetrics, 2000);
@@ -119,6 +130,7 @@ const game = {
         console.log("click");
         game.handleHide();
         game.metricsTimer();
+        game.ageTimer();
 
     },
 
@@ -160,6 +172,7 @@ const game = {
         $slicedCount.text(` ${game.slicedScore}`);
     },
     
+    /*
     handleAge(){
         const $ageCount = $("#age-count");
         if (game.feedScore === 9 || game.slicedScore === 9 || game.icedScore === 9){
@@ -171,7 +184,7 @@ const game = {
                 game.round++;
             };
         
-    },
+    },*/
 
     clearScores(){
         game.feedScore = 10;
@@ -194,9 +207,7 @@ const game = {
     - The "needs" increase in difficulty every time the sandwich matures 
         - first need to clear the interval and the scores
             -make a new function to clear the scores and set them back to 10
-        -alert user that it's the next round
-            - grab a elm from the dom
-            - create a new start button
+
         - change the picture
         - increase the difficulty 
         - start the countdown again
