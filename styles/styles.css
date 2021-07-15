@@ -9,11 +9,12 @@ body {
     width: 1024px;
 }
 
-.about-game .form-box {
+.card-box {
     background-color: thistle;
     height: 500px;
     width: 500px;
     z-index: 2;
+    
 }
 
 .metrics{

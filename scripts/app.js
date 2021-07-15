@@ -71,6 +71,7 @@ const game = {
     time: null,
     timer: null,
 
+
     sandoImgs: [
         {
             src:"https://c4.wallpaperflare.com/wallpaper/578/626/344/movie-spider-man-into-the-spider-verse-miles-morales-spider-man-hd-wallpaper-preview.jpg",
@@ -83,11 +84,14 @@ const game = {
     ],
 
 
+
     handleHide(){
-        const $gameBox = $(".about-game");
-        const $formBox = $(".form-box");
-        $gameBox.remove();
-        $formBox.remove();
+        const $cardBox = $(".card-box");
+        $cardBox.remove();
+        //const $gameBox = $(".about-game");
+        //const $formBox = $(".form-box");
+        //$gameBox.remove();
+        //$formBox.remove();
 
     },
 
@@ -108,10 +112,16 @@ const game = {
         const $ageCount = $("#age-count");
         game.ageScore++;
         $ageCount.text(` ${game.ageScore}`);
+        if (game.ageScore === 1){
+            $("#sando__img").attr("src", game.sandoImgs[0].src);
+            $("#sando__img").attr("alt", game.sandoImgs[0].alt);
+            
+            
+        }
     },
 
     ageTimer(){
-        game.timer = setInterval(game.ageSando, 60000);
+        game.timer = setInterval(game.ageSando, 7000);
     },
 
 
@@ -126,13 +136,7 @@ const game = {
     },
 
 
-    startSando(){
-        console.log("click");
-        game.handleHide();
-        game.metricsTimer();
-        game.ageTimer();
 
-    },
 
     submitName(){
         console.warn("clicked");
@@ -190,14 +194,47 @@ const game = {
         game.feedScore = 10;
         game.icedScore = 10;  
         game.slicedScore = 10;
+        game.ageScore = 0;
         $("#feed-count").text(` ${game.feedScore}`);
         $("#iced-count").text(` ${game.icedScore}`);
         $("#sliced-count").text(` ${game.slicedScore}`);
+        $("#age-count").text(` ${game.ageScore}`);
     },
 
-    
+
+    /*handleAge(){
+        console.log("ugghhhhhh")
+        //const $sandoImg = $("#sando__img");
+        //console.log("just the img", $sandoImg);
+        //console.log("img attr", $sandoImg.attr);
+        //console.log("img attr.src", $sandoImg.attr src);
+        if (game.ageScore === 1){
+            $sandoImg.attr({src: "https://i.ytimg.com/vi/yMYDRFzCCDw/maxresdefault.jpg", alt:"spider pig"});           
+            //$(selector).attr({attribute:value, attribute:value,...})
+        
+        }
+        //const $sandoImg = $("#sando__img src");
+        console.log(game.sandoImgs[0].src);
+        console.log(game.ageScore);
+        if (game.ageScore === 1){
+            $("#sando__img").attr("src", game.sandoImgs[0].src);
+            $sandoImg.attr("alt", game.sandoImgs[0].alt);
+            console.log($sandoImg.attr("src"));
+            
+        }
+    },
+    */
+
+    startSando(){
+        console.log("click");
+        game.handleHide();
+        game.metricsTimer();
+        game.ageTimer();
+        //game.handleAge();
+        game.clearScores();
 
 
+    },
 
 /*
 7. Every 10 times the "needs" reach 10, the user will see the sandwich age into a more mature sandwich
