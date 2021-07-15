@@ -135,12 +135,12 @@ const game = {
                     game.time = setInterval(game.reduceMetrics, 1000);
                 }
     },
-
+    /*Instead of metricsBottom - i should ahev game over!
     metricsBottom(){
         if (game.feedScore === 0 || game.slicedScore === 0 || game.icedScore === 0) {
             clearInterval(game.time);
         }
-    },
+    },*/
 
 
     submitName(){
