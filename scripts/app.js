@@ -160,7 +160,7 @@ const game = {
 
     
     metricsTimer(){
-        game.time = setInterval(game.reduceMetrics, 2000);
+        game.time = setInterval(game.reduceMetrics, 500);
     },
     
 /*
