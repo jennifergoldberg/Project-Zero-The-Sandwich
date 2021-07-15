@@ -72,26 +72,39 @@
 
 
     <main>
-        <div id="plate"></div>
+        <!-- <div id="plate"></div> -->
         
         <div class="sando" >
-            <img id="sando__img" class="animate__animated animate__bounce animate__infinite" src="images/sandwich-148023_1280.png" height="300px" alt="Sandwich">
+            <img id="sando__img" class="animate__animated animate__bounce animate__infinite" src="images/sandwich-148023_1280.png"  alt="Sandwich">
         </div>
 
         <div class="metrics">
+            <p>Hunger:</p>
             <div class="meter-feed">
-                <p>Hunger 1-10:<span id="feed-count"> 10</span> </p>
+                <div class="feed-progress">
+                    <span id="feed-count"></span>
+                </div>
             </div>
-            <div class="meter-ice">
-                <p>Sleep 1-10: <span id="iced-count"> 10</span> </p>
+
+            <div class="meter-iced">
+                <p>Sleep:</p>
+                <div class="iced-progress">
+                    <span id="iced-count"></span> 
+                </div>
             </div>
-            <div class="meter-slice">
-                <span></span>
-                <p>Boredom 1-10: <span id="sliced-count"> 10</span></p>
+
+            <div class="meter-sliced">
+                <p>Boredom:</p> 
+                <div class="sliced-progress">
+                    <span id="sliced-count"></span>
+                </div>
             </div>
+
             <div class="meter-age">
-                <span></span>
-                <p>Age: <span id="age-count">0</span></p>
+                <p>Age:</p> 
+                <div class="age-progress">
+                    <span id="age-count"></span>
+                </div>
             </div>
         </div>
     </main>

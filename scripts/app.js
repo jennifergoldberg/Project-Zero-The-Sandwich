@@ -108,26 +108,29 @@ const game = {
         game.feedScore--;
         game.icedScore--;  
         game.slicedScore--;
-        $("#feed-count").text(` ${game.feedScore}`);
-        $("#iced-count").text(` ${game.icedScore}`);
-        $("#sliced-count").text(` ${game.slicedScore}`);
+        //$("#feed-count").text(` ${game.feedScore}`);
+        $(".feed-progress").css("width", `${game.feedScore * 10}%`);
+        //$("#iced-count").text(` ${game.icedScore}`);
+        $(".iced-progress").css("width", `${game.icedScore * 10}%`);
+        //$("#sliced-count").text(` ${game.slicedScore}`);
+        $(".sliced-progress").css("width", `${game.slicedScore * 10}%`);
         game.handleGameOver();
 
     },
 
     ageSando(){
         //console.log("working");
-        const $ageCount = $("#age-count");
+        //const $ageCount = $("#age-count");
         game.ageScore++;
-        $ageCount.text(` ${game.ageScore}`);
+        //$ageCount.text(` ${game.ageScore}`);
+        $(".age-progress").css("width", `${game.ageScore * 10}%`);
         if (game.ageScore === 1){
-                $("#sando__img").attr("src", game.sandoImgs[0].src);
-                $("#sando__img").attr("alt", game.sandoImgs[0].alt);
+            $("#sando__img").attr("src", game.sandoImgs[0].src);
+            $("#sando__img").attr("alt", game.sandoImgs[0].alt);
                 } else if
                     (game.ageScore === 2){
                         $("#sando__img").attr("src", game.sandoImgs[1].src);
                         $("#sando__img").attr("alt", game.sandoImgs[1].alt);
-
                     } else if
                         (game.ageScore === 3){
                             $("#sando__img").attr("src", game.sandoImgs[2].src);
@@ -147,10 +150,10 @@ const game = {
         game.icedScore = 10;  
         game.slicedScore = 10;
         game.ageScore = 0;
-        $("#feed-count").text(` ${game.feedScore}`);
-        $("#iced-count").text(` ${game.icedScore}`);
-        $("#sliced-count").text(` ${game.slicedScore}`);
-        $("#age-count").text(` ${game.ageScore}`);
+        //$("#feed-count").text(` ${game.feedScore}`);
+        //$("#iced-count").text(` ${game.icedScore}`);
+        //$("#sliced-count").text(` ${game.slicedScore}`);
+        //$("#age-count").text(` ${game.ageScore}`);
     },
 
 
@@ -161,7 +164,7 @@ const game = {
 
     
     metricsTimer(){
-        game.time = setInterval(game.reduceMetrics, 2000);
+        game.time = setInterval(game.reduceMetrics, 1000);
     },
     
 /*
@@ -228,33 +231,34 @@ const game = {
 
 
     handleFeed (){
-        const $feedCount = $("#feed-count");
+        //const $feedCount = $("#feed-count");
         if (game.feedScore <= 9){
-            console.log("game");
             game.feedScore++;
             };
-        $feedCount.text(` ${game.feedScore}`);
+        $(".feed-progress").css("width", `${game.feedScore * 10}%`);
+        //$feedCount.text(` ${game.feedScore}`);
         },
 
     
     handleIce (){
-        const $icedCount = $("#iced-count");
-        console.log("click");
+        //const $icedCount = $("#iced-count");
+        //console.log("click");
         if (game.icedScore <= 9){
-            console.log("game");
             game.icedScore++;
             };
-        $icedCount.text(` ${game.icedScore}`);
+        $(".iced-progress").css("width", `${game.icedScore * 10}%`);
+        //$icedCount.text(` ${game.icedScore}`);
     },
     
     handleSlice(){
-        const $slicedCount = $("#sliced-count");
+        //const $slicedCount = $("#sliced-count");
         console.log("click");
         if (game.slicedScore <= 9){
             console.log("game");
             game.slicedScore++;
             };
-        $slicedCount.text(` ${game.slicedScore}`);
+        $(".sliced-progress").css("width", `${game.slicedScore * 10}%`);
+        //$slicedCount.text(` ${game.slicedScore}`);
     },
     
 

@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    margin: auto;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -13,8 +13,9 @@
 }
 
 body {
+    padding: 0 40px;
     height: 80vh;
-    width: 1000px;
+    width: 900px;
     margin: 0 auto;
     font-family: 'Arvo', serif;
     background-color: var(--background);
@@ -62,14 +63,7 @@ body {
     padding: 20px 0 20px 50px;
 }
 
-.metrics{
-    display: block;
-    margin-right: 400px;
-}
 
-#sando__img{
-    width: 200px;
-}
 
 .game-over{
     z-index: 200;
@@ -88,8 +82,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
 
 
 header {
@@ -116,14 +108,96 @@ header h2 {
 main {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    z-index: 1;
+    justify-content: space-evenly;
+    position: relative;
 }
 
 img{
-    max-width: 500px;
-    margin: 40px;
+    max-width: 300px;
+    margin: 10px;
 }
+
+.metrics{
+    padding: 20 40px;
+    margin: 20 20px;
+    height: 400px;
+    width: 200px;
+    }
+
+.metrics p{
+    padding: 10px 0;
+}    
+
+.meter-feed{
+    /* background: rgba(255,255,255,0.1); */
+    border-radius: 100px;
+    padding: 20 5px;
+    height: 40px;
+    width: 250px;
+}
+
+.feed-progress{
+    /* box-shadow: 0 10px 40px -10px #fff; */
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+.meter-iced{
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    /* padding: 0 5px; */
+    height: 40px;
+    width: 250px;
+}
+
+.iced-progress{
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+.meter-sliced{
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    /* padding: 0 5px; */
+    height: 40px;
+    width: 250px;
+}
+
+.sliced-progress{
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+.meter-age{
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    /* padding: 0 5px; */
+    height: 40px;
+    width: 250px;
+}
+
+.age-progress{
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 30px;
+    width: 0;
+}
+
+@keyframes load {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+
 
 /*#plate {
     height: 30vh;
@@ -145,6 +219,7 @@ footer {
     margin-bottom: 20px;
     position: relative;
     display: flex;
+    justify-content: space-evenly;
     
 
 }
