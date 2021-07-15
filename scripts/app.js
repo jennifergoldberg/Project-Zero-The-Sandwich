@@ -120,26 +120,25 @@ const game = {
         const $ageCount = $("#age-count");
         game.ageScore++;
         $ageCount.text(` ${game.ageScore}`);
-        
         if (game.ageScore === 1){
-            $("#sando__img").attr("src", game.sandoImgs[0].src);
-            $("#sando__img").attr("alt", game.sandoImgs[0].alt);
-            } else if
-                (game.ageScore === 2){
-                    $("#sando__img").attr("src", game.sandoImgs[1].src);
-                    $("#sando__img").attr("alt", game.sandoImgs[1].alt);
+                $("#sando__img").attr("src", game.sandoImgs[0].src);
+                $("#sando__img").attr("alt", game.sandoImgs[0].alt);
                 } else if
-                    (game.ageScore === 3){
-                        $("#sando__img").attr("src", game.sandoImgs[2].src);
-                        $("#sando__img").attr("alt", game.sandoImgs[2].alt);
+                    (game.ageScore === 2){
+                        $("#sando__img").attr("src", game.sandoImgs[1].src);
+                        $("#sando__img").attr("alt", game.sandoImgs[1].alt);
                     } else if
-                        (game.ageScore === 4){
-                            $("#sando__img").attr("src", game.sandoImgs[3].src);
-                            $("#sando__img").attr("alt", game.sandoImgs[3].alt);
+                        (game.ageScore === 3){
+                            $("#sando__img").attr("src", game.sandoImgs[2].src);
+                            $("#sando__img").attr("alt", game.sandoImgs[2].alt);
                         } else if
-                            (game.ageScore === 5){
-                                game.handleGameWon();
-                            }   
+                            (game.ageScore === 4){
+                                $("#sando__img").attr("src", game.sandoImgs[3].src);
+                                $("#sando__img").attr("alt", game.sandoImgs[3].alt);
+                            } else if
+                                (game.ageScore === 5){
+                                    game.handleGameWon();
+                                }   
     },
 
     clearScores(){
@@ -159,9 +158,15 @@ const game = {
     },
 
 
+    
+    metricsTimer(){
+        game.time = setInterval(game.reduceMetrics, 2000);
+    },
+    
+/*
     metricsTimer(){
         if (game.ageScore === 0){
-            game.time = setInterval(game.reduceMetrics, 500);
+            game.time = setInterval(game.reduceMetrics, 2000);
             }else if
                 (game.ageScore === 1){
                     game.time = setInterval(game.reduceMetrics, 1500);
@@ -176,7 +181,7 @@ const game = {
                                 game.time = setInterval(game.reduceMetrics, 500);
                         }
     },
-    
+    */
 
     /*
     -grab element from the dom and create method to hide it - done
@@ -206,6 +211,8 @@ const game = {
         $gameWon.toggle(false);
         if (game.age === 5) {
             $gameWon.toggle(true);
+            clearInterval(game.time);
+            clearInterval(game.timer);
 
         };
     },
