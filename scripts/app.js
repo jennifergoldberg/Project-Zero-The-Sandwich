@@ -116,7 +116,6 @@ const game = {
             $("#sando__img").attr("src", game.sandoImgs[0].src);
             $("#sando__img").attr("alt", game.sandoImgs[0].alt);
             
-            
         }
     },
 
@@ -126,7 +125,15 @@ const game = {
 
 
     metricsTimer(){
-        game.time = setInterval(game.reduceMetrics, 2000);
+        if (game.ageScore === 0){
+            game.time = setInterval(game.reduceMetrics, 2000);
+        }else if
+            (game.ageScore === 1){
+                game.time = setInterval(game.reduceMetrics, 1500);
+            }else if
+                (game.ageScore === 2){
+                    game.time = setInterval(game.reduceMetrics, 1000);
+                }
     },
 
     metricsBottom(){
@@ -134,8 +141,6 @@ const game = {
             clearInterval(game.time);
         }
     },
-
-
 
 
     submitName(){
@@ -176,19 +181,6 @@ const game = {
         $slicedCount.text(` ${game.slicedScore}`);
     },
     
-    /*
-    handleAge(){
-        const $ageCount = $("#age-count");
-        if (game.feedScore === 9 || game.slicedScore === 9 || game.icedScore === 9){
-            game.ageScore++;
-            console.log("aged");
-        };
-        $ageCount.text(` ${game.ageScore}`);
-            if (game.ageScore % 10 === 0){
-                game.round++;
-            };
-        
-    },*/
 
     clearScores(){
         game.feedScore = 10;
@@ -202,35 +194,11 @@ const game = {
     },
 
 
-    /*handleAge(){
-        console.log("ugghhhhhh")
-        //const $sandoImg = $("#sando__img");
-        //console.log("just the img", $sandoImg);
-        //console.log("img attr", $sandoImg.attr);
-        //console.log("img attr.src", $sandoImg.attr src);
-        if (game.ageScore === 1){
-            $sandoImg.attr({src: "https://i.ytimg.com/vi/yMYDRFzCCDw/maxresdefault.jpg", alt:"spider pig"});           
-            //$(selector).attr({attribute:value, attribute:value,...})
-        
-        }
-        //const $sandoImg = $("#sando__img src");
-        console.log(game.sandoImgs[0].src);
-        console.log(game.ageScore);
-        if (game.ageScore === 1){
-            $("#sando__img").attr("src", game.sandoImgs[0].src);
-            $sandoImg.attr("alt", game.sandoImgs[0].alt);
-            console.log($sandoImg.attr("src"));
-            
-        }
-    },
-    */
-
     startSando(){
         console.log("click");
         game.handleHide();
         game.metricsTimer();
         game.ageTimer();
-        //game.handleAge();
         game.clearScores();
 
 

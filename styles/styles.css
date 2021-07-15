@@ -14,7 +14,7 @@ body {
     height: 500px;
     width: 500px;
     z-index: 2;
-    
+
 }
 
 .metrics{
@@ -22,7 +22,9 @@ body {
     margin-right: 400px;
 }
 
-
+#sando__img{
+    width: 200px;
+}
 
 header {
     background-color: azure;
