@@ -111,7 +111,7 @@ const game = {
         $("#feed-count").text(` ${game.feedScore}`);
         $("#iced-count").text(` ${game.icedScore}`);
         $("#sliced-count").text(` ${game.slicedScore}`);
-        game.handleGameOverHide();
+        game.handleGameOver();
 
     },
 
@@ -120,6 +120,7 @@ const game = {
         const $ageCount = $("#age-count");
         game.ageScore++;
         $ageCount.text(` ${game.ageScore}`);
+        
         if (game.ageScore === 1){
             $("#sando__img").attr("src", game.sandoImgs[0].src);
             $("#sando__img").attr("alt", game.sandoImgs[0].alt);
@@ -135,7 +136,10 @@ const game = {
                         (game.ageScore === 4){
                             $("#sando__img").attr("src", game.sandoImgs[3].src);
                             $("#sando__img").attr("alt", game.sandoImgs[3].alt);
-                        }
+                        } else if
+                            (game.ageScore === 5){
+                                game.handleGameWon();
+                            }   
     },
 
     clearScores(){
@@ -157,7 +161,7 @@ const game = {
 
     metricsTimer(){
         if (game.ageScore === 0){
-            game.time = setInterval(game.reduceMetrics, 2000);
+            game.time = setInterval(game.reduceMetrics, 500);
             }else if
                 (game.ageScore === 1){
                     game.time = setInterval(game.reduceMetrics, 1500);
@@ -187,7 +191,7 @@ const game = {
         -invoke in game over
         -use same as start game
     */
-    handleGameOverHide(){
+    handleGameOver(){
         const $gameOver = $(".game-over");
         $gameOver.toggle(false);
         if (game.feedScore === 0 || game.slicedScore === 0 || game.icedScore === 0) {
@@ -197,24 +201,15 @@ const game = {
         };
     },
 
-    /*handleGameOver(){
-        console.log("game over");
-        const $gameOver = $(".game-over");
-        if (game.feedScore === 0 || game.slicedScore === 0 || game.icedScore === 0) {
-            $gameOver.toggle(true);
-            clearInterval(game.time);
-            clearInterval(game.timer);
-        }
-    },*/
+    handleGameWon(){
+        const $gameWon = $(".game-won");
+        $gameWon.toggle(false);
+        if (game.age === 5) {
+            $gameWon.toggle(true);
 
-    /*
-    metricsBottom(){
-        if (game.feedScore === 0 || game.slicedScore === 0 || game.icedScore === 0) {
-            clearInterval(game.time);
-            clearInterval(game.timer);
-        }
+        };
     },
-    */
+
 
     submitName(){
         console.warn("clicked");
@@ -255,15 +250,14 @@ const game = {
     },
     
 
-
     startSando(){
         console.log("click");
         game.handleHide();
         game.metricsTimer();
         game.ageTimer();
         game.clearScores();
-        game.handleGameOverHide();
-        //game.handleGameOver();
+        game.handleGameOver();
+        game.handleGameWon();
 
 
     },
