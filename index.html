@@ -8,12 +8,18 @@
     
     <!--Normalize CSS 
     <link rel="stylesheet" href="normalize.css/">-->
-    
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="styles/styles.css">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
@@ -25,7 +31,7 @@
 <body>
     <div class="card-box">
         <div class="card-border">
-            <h2>Welcome to The Sandwich</h2>
+            <h2 class="animate__animated animate__bounce">Welcome to The Sandwich</h2>
             <div class="form-box">
                 <div class="form">
                     <label for="form-says">Enter a name for your Sandwich</label>
@@ -50,6 +56,7 @@
         <div id="over__text">
             <h2>Game Over!</h2>
             <p>Eww! You let your sandwich grow mold!</p>
+            <button id="restart">Restart</button>
         </div>
         <!--<img src="images/sandy-millar-6tF2unOGK1c-unsplash.jpg" alt="moldy fruit">-->
     </div>

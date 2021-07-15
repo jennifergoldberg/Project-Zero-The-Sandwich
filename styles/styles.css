@@ -33,7 +33,10 @@ body {
 }
 
 .card-border{
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     min-height: 380px;
     max-width: 700px;
     border-radius: 10px;

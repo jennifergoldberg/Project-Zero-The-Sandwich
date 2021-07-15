@@ -74,8 +74,8 @@ const game = {
 
     sandoImgs: [
         {
-            src:"https://c4.wallpaperflare.com/wallpaper/578/626/344/movie-spider-man-into-the-spider-verse-miles-morales-spider-man-hd-wallpaper-preview.jpg",
-            alt: "Miles Morales",
+            src:"images/sandwich-576531_640.png",
+            alt: "sandwich with meat vector",
         },
         {
             src:"https://i.ytimg.com/vi/yMYDRFzCCDw/maxresdefault.jpg",
@@ -127,6 +127,7 @@ const game = {
                     (game.ageScore === 2){
                         $("#sando__img").attr("src", game.sandoImgs[1].src);
                         $("#sando__img").attr("alt", game.sandoImgs[1].alt);
+
                     } else if
                         (game.ageScore === 3){
                             $("#sando__img").attr("src", game.sandoImgs[2].src);
@@ -318,5 +319,8 @@ $("#iced").on("click", game.handleAge);
 
 $("#sliced").on("click", game.handleSlice);
 $("#sliced").on("click", game.handleAge);
+
+$("#restart").on("click", game.startSando);
+
 
 
