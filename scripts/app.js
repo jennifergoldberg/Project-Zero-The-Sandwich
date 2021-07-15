@@ -96,7 +96,7 @@ const game = {
     },
 
     reduceMetrics(){
-        console.log("hi");
+        //console.log("hi");
         game.feedScore--;
         game.icedScore--;  
         game.slicedScore--;
@@ -108,7 +108,7 @@ const game = {
     },
 
     ageSando(){
-        console.log("working");
+        //console.log("working");
         const $ageCount = $("#age-count");
         game.ageScore++;
         $ageCount.text(` ${game.ageScore}`);
@@ -135,13 +135,37 @@ const game = {
                     game.time = setInterval(game.reduceMetrics, 1000);
                 }
     },
-    /*Instead of metricsBottom - i should ahev game over!
+    
+
+    /*
+    -grab element from the dom and create method to hide it
+        -use .hide
+        -invoke in start game
+    -create game over method
+        -if anything === 0
+        - use .show()
+        -stop metrics
+        -invoke in metrics bottom
+    -create replay method
+        -invoke in game over
+        -use same as start game
+    */
+    handleGameOverHide(){
+        const
+
+    },
+
+    handleGameOver(){
+
+
+    },
+
     metricsBottom(){
         if (game.feedScore === 0 || game.slicedScore === 0 || game.icedScore === 0) {
             clearInterval(game.time);
+            clearInterval(game.timer);
         }
-    },*/
-
+    },
 
     submitName(){
         console.warn("clicked");
