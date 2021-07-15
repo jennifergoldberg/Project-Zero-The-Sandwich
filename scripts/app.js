@@ -81,6 +81,14 @@ const game = {
             src:"https://i.ytimg.com/vi/yMYDRFzCCDw/maxresdefault.jpg",
             alt:"spider pig",
         },
+        {
+            src:"https://c4.wallpaperflare.com/wallpaper/578/626/344/movie-spider-man-into-the-spider-verse-miles-morales-spider-man-hd-wallpaper-preview.jpg",
+            alt: "Miles Morales",
+        },
+        {
+            src:"https://i.ytimg.com/vi/yMYDRFzCCDw/maxresdefault.jpg",
+            alt:"spider pig",
+        },
     ],
 
 
@@ -115,8 +123,19 @@ const game = {
         if (game.ageScore === 1){
             $("#sando__img").attr("src", game.sandoImgs[0].src);
             $("#sando__img").attr("alt", game.sandoImgs[0].alt);
-            
-        }
+            } else if
+                (game.ageScore === 2){
+                    $("#sando__img").attr("src", game.sandoImgs[1].src);
+                    $("#sando__img").attr("alt", game.sandoImgs[1].alt);
+                } else if
+                    (game.ageScore === 3){
+                        $("#sando__img").attr("src", game.sandoImgs[2].src);
+                        $("#sando__img").attr("alt", game.sandoImgs[2].alt);
+                    } else if
+                        (game.ageScore === 4){
+                            $("#sando__img").attr("src", game.sandoImgs[3].src);
+                            $("#sando__img").attr("alt", game.sandoImgs[3].alt);
+                        }
     },
 
     clearScores(){
@@ -138,14 +157,20 @@ const game = {
 
     metricsTimer(){
         if (game.ageScore === 0){
-            game.time = setInterval(game.reduceMetrics, 1000);
-        }else if
-            (game.ageScore === 1){
-                game.time = setInterval(game.reduceMetrics, 1500);
+            game.time = setInterval(game.reduceMetrics, 2000);
             }else if
-                (game.ageScore === 2){
-                    game.time = setInterval(game.reduceMetrics, 1000);
-                }
+                (game.ageScore === 1){
+                    game.time = setInterval(game.reduceMetrics, 1500);
+                }else if
+                    (game.ageScore === 2){
+                        game.time = setInterval(game.reduceMetrics, 1000);
+                    }else if
+                        (game.ageScore === 3){
+                            game.time = setInterval(game.reduceMetrics, 700);
+                        }else if
+                            (game.ageScore === 4){
+                                game.time = setInterval(game.reduceMetrics, 500);
+                        }
     },
     
 

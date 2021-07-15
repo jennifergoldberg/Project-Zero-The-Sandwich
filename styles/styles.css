@@ -96,14 +96,19 @@ main {
     z-index: 1;
 }
 
-#plate {
+img{
+    max-width: 500px;
+    margin: 40px;
+}
+
+/*#plate {
     height: 30vh;
     width: 50vw;
     max-width: 500px;
     background-color: whitesmoke;
     border-radius: 550px;
     margin: 40px;
-}
+}*/
 
 
 
