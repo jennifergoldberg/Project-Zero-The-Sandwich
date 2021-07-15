@@ -161,7 +161,7 @@ const game = {
 
     
     metricsTimer(){
-        game.time = setInterval(game.reduceMetrics, 500);
+        game.time = setInterval(game.reduceMetrics, 2000);
     },
     
 /*
