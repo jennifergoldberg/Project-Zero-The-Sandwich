@@ -1,6 +1,42 @@
-# Project-Zero-Tomagotchi
+# Project-Zero-The Sandwich
 
 
+### The Sandwich
+
+
+- **A `README.md` file** with an explanation of what the project is and why you made it, your user stories, explanations of the technologies used, the approach taken, installation instructions, unsolved problems, the other components previously indicated (if applicable). In this project, also include your wireframes in the readme.
+- A 10 minute presentation to your classmates and instructor, illustrating:
+    - App functionality
+    - Triumphs
+    - Challenges
+    - Words of Wisdom
+    - Code snippets
+
+
+### User Story
+1. The user opens the site on the browser 
+2. The user see a splash plage with a blank field and is asked to enter a name for their sandwich and press a submit button that says " "
+
+3. The opacity will be removed and the user will see the sandwich game
+    - The user's chosen name will be displayed in the header
+4. The user will "meet" their sandwich as a Tea Sandwich and the user can start the game by clicking any button
+5. The user will click one of three buttons to take care of the sandwich by meeting the sandwich's "needs"
+    - The Feed button will run the feedMe() that will feed the sandwich and adjust the progress bar for the hunger metrics 
+    - The Slice button will run the sliceMe() that will play with the sandwich to prevent boredom and adjust the progress bar for the boredom metrics 
+    - The Ice button will run the iceMe() that will put the sandwich to bed and adjust the progress bar for the sleepiness metrics 
+6. The user can see the "needs" of the sandwich in the progress bar
+    - The sandwich's "needs" are rated 0-10, with 0 being the lowest and 10 the highest
+    - As the user presses the Feed, Slice, or Ice buttons, the progress bar will increase to a max of 10
+    - The progress bar will reduce from 10 every 2s
+7. Every 1 minute, the user will see the sandwich age into a more mature sandwich
+    - The sandwich starts as a tea sandwich
+    - The first age will turn the sandwich into a club sandwich
+    - The second age will turn the sandwich into a submarine sandwich (hoagie)
+    - The "needs" increase in difficulty every time the sandwich matures 
+8. If the user does not meet the "needs" of the sandwich, the sandwich will get modly and the game will be over
+    - The mold will appear as a filter over the sandwich at it's present state
+    - The user will be alerted of their failure with text that says "Game Over!" 
+9. The user wins the game by meeting the "needs" the submarine sandwich  
 
 ### MVPs
 **Technical Requirements**
@@ -120,6 +156,6 @@ Your app must:
 
 
 
-### Attributes
+### Wireframe
 
-<a href="https://www.freepik.com/vectors/food">Food vector created by macrovector_official - www.freepik.com</a>
+<img src="assets/images/Wireframe.png" alt="Wireframe" />

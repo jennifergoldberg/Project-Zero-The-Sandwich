@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>The Sandwich</title>
     
-    <!--Normalize CSS 
-    <link rel="stylesheet" href="normalize.css/">-->
+    <!--Normalize CSS -->
+    <link type="text/css" rel="stylesheet" href="normalize.css/">
 
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
+    <script src="https://kit.fontawesome.com/30ed781007.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,23 +34,25 @@
 <body>
     <div class="card-box">
         <div class="card-border">
-            <h2 class="animate__animated animate__bounce">Welcome to The Sandwich</h2>
+            <h2 class="animate__animated animate__backInDown">Welcome to The Sandwich</h2>
             <div class="form-box">
                 <div class="form">
                     <label for="form-says">Enter a name for your Sandwich</label>
-                    <input id="user-name" type="text">
+                    <input class="animate__animated animate__pulse animate__repeat-3" id="user-name" type="text">
                     <input id="submit-name" type="submit" >
                 </div>
             </div> 
             <div class="about-game">
-                <p>Click the buttons to take care of your sandwich and prevent it from <span>growing mold!</span></p>
+                <p>Click the buttons to take care of your sandwich</p>  
+                <h3>Don't let it grow mold!</h3>
                 <ul>
                     <li>Feed your Sandwich by clicking the <button>Feed</button> button</li>
                     <li>Play with your Sandwich by clicking the <button>Slice</button> button</li>
                     <li>Put your Sandwich to bed by clicking the <button>Ice</button> button</li>
-                    <li>Keep an eye on the meter bars and don't let them reach zero!</li>
+                    <li>Keep an eye on the meter bars & don't let them reach zero!</li>
                 </ul>
-                <button id="start-game">Start Game</button>
+                <button  id="start-game">Start Game</button>
+                
             </div>
         </div>
     </div>
@@ -58,16 +63,19 @@
             <p>Eww! You let your sandwich grow mold!</p>
             <button id="restart">Restart</button>
         </div>
-        <!--<img src="images/sandy-millar-6tF2unOGK1c-unsplash.jpg" alt="moldy fruit">-->
     </div>
 
     <div class="game-won">
-        <h2>You Won!</h2>
+        <div id="won__text">
+            <h2>You Won!</h2>
+            <button id="replay">Restart</button>
+        </div>
     </div>
 
     <header>
         <h1>Welcome to The Sandwich</h1>
-        <h2>Today on the Plate:<span id="sandwich-name"></span></h2>
+        <h2>Today on the Plate: <span id="sandwich-name"></span></h2>
+        <img id="the-king" class="animate__animated animate__wobble animate__infinite" src="assets/images/elvis-937618_1920.png" alt="Elvis Presley">
     </header>
 
 
@@ -75,7 +83,7 @@
         <!-- <div id="plate"></div> -->
         
         <div class="sando" >
-            <img id="sando__img" class="animate__animated animate__bounce animate__infinite" src="assets/images/sandwich-148023_1280.png"  alt="Sandwich">
+            <img id="sando__img" class="animate__animated animate__bounce animate__infinite" src="assets/images/tea-sandwich.png"  alt="Tea Sandwich">
         </div>
 
         <div class="meter-space">
@@ -117,9 +125,7 @@
             <button id="feed">Feed</button>
             <button id="iced">Ice</button>
             <button id="sliced">Slice</button>
-            <button id="kinged">King</button>
         </div>
-        <img id="the-king" class="animate__animated animate__wobble animate__infinite" src="assets/images/elvis-937618_1920.png" alt="Elvis Presley">
     </footer>
     
 </body>

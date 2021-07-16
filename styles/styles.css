@@ -12,6 +12,7 @@
     --green: #7ac943;
     --yellow: #f2e205;
     --pink: #ff7fd5;
+    --darkpurple: #42128d;
 }
 
 body {
@@ -42,11 +43,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     min-height: 380px;
-    max-width: 700px;
+    max-width: 800px;
     border-radius: 10px;
     align-items: center;
     background-color: var(--lightpurple);
-    border: 10px solid var(--teal);
+    border: 10px solid #42128d;
     padding: 40px;
     text-align: center;
     color: whitesmoke;
@@ -61,18 +62,70 @@ body {
 
 .card-border ul{
     text-align: justify;
-    margin-left: 20px;
     line-height: 1.5;
     padding: 20px 0 20px 50px;
 }
 
-#start-game:hover{
+#submit-name{
     font-family: 'Arvo', serif;
+    font-weight: 400;
+    padding: 7px;
+    border-radius: 5px;
+    animation: ease-in-out;
+    background: whitesmoke;
+    box-shadow: 5px 5px 15px 5px rbga(255,255,255,.8);
+    color: var(--background);
+    cursor: pointer;
+}
+
+#submit-name:hover{
+    color:var(--pink);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.about-game p{
+    margin: 10px 0;
     font-weight: 700;
+}
+
+.about-game h3{
+    color:var(--teal);
+    margin: 20px 0 0 0;
+    font-weight: 700;
+}
+
+li button{
+    font-family: 'Arvo', serif;
+    font-weight: 400;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background: whitesmoke;
+}
+
+li{
+    line-height: 2.5;
+}
+
+#start-game{
+    font-family: 'Arvo', serif;
+    font-weight: 400;
     font-size: 1em;
     padding: 10px;
-    border-radius: 2px;
+    border-radius: 5px;
+    transition: 300ms ease-in-out;
+    background: whitesmoke;
+    box-shadow: 15px rbga(255,255,255,.8);
+    color: var(--background);
 }
+
+#start-game:hover{
+    background:#42128d;
+    color: whitesmoke;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 
 .game-over{
@@ -84,6 +137,7 @@ body {
     width: 100%;
     height: 100vh; 
     background-size: cover;
+    text-align: center;
 }
 
 #over__text{
@@ -93,12 +147,82 @@ body {
     transform: translate(-50%, -50%);
 }
 
+#over__text h2{
+    font-size: 3em;
+    padding: 5px;
+}
+
+#over__text p{
+    font-size: 2em;
+    padding: 5px;
+}
+
+#restart{
+    margin-top: 10px;
+    font-family: 'Arvo', serif;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 10px;
+    font-family: 'Arvo', serif;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: 300ms ease-in-out;
+    background: whitesmoke;
+    box-shadow: 15px rbga(255,255,255,.8);
+    color: var(--background);
+}
+
+#restart:hover{
+    background:var(--yellow);
+    color: whitesmoke;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.game-won {
+    z-index: 200;
+    position: fixed;
+    background: var(--background);
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    text-align: center;
+}
+
+#won__text{
+    font-size: 3em;
+    color:#ff7fd5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#replay{
+    font-family: 'Arvo', serif;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 300ms ease-in-out;
+    background: whitesmoke;
+    box-shadow: 15px rbga(255,255,255,.8);
+    color: var(--background);
+}
+
+#replay:hover{
+    background: var(--lightpurple);
+    color: whitesmoke;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 header {
     background-color: azure;
-    background: var(--orange);
+    background: var(--lightpurple);
     border-radius: 5px;
-    height: 20vh;
+    height: 15vh;
     width: 100%;
     max-width: 900px;
     margin-top: 50px;
@@ -123,9 +247,11 @@ main {
     position: relative;
 }
 
-img{
+.sando img{
     max-width: 300px;
     margin: 10px;
+    border-radius: 20px;
+    border: 10px dotted #42128d;
 }
 
 .meter-space{
@@ -184,35 +310,14 @@ img{
     width: 0;
 }
 
-/* .meter-age{
-    background: var(--lightpurple);
-    border-radius: 100px;
-    height: 30px;
-    width: 250px;
+#age-name{
+    font-size: 24px;
 }
-
-.age-progress{
-    border-radius: 100px;
-    background: #fff;
-    height: 30px;
-    width: 0;
-}  */
 
 @keyframes load {
     0% { width: 0; }
     100% { width: 100%; }
 }
-
-
-
-/*#plate {
-    height: 30vh;
-    width: 50vw;
-    max-width: 500px;
-    background-color: whitesmoke;
-    border-radius: 550px;
-    margin: 40px;
-}*/
 
 
 
@@ -229,9 +334,64 @@ footer {
     
 
 }
+#feed {
+    font-family: 'Arvo', serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 25px 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    animation: ease-in-out;
+    background: whitesmoke;
+    box-shadow: 5px 5px 15px 5px rbga(255,255,255,.8);
+    color: var(--background);
+    cursor: pointer;
+}
+#feed:hover{
+    color:var(--pink);
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
-    #iced {
-    padding: 5px 20px;
-    margin: 30px;
-    color: pink;
+#iced {
+    font-family: 'Arvo', serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 25px 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    animation: ease-in-out;
+    background: whitesmoke;
+    box-shadow: 5px 5px 15px 5px rbga(255,255,255,.8);
+    color: var(--background);
+    cursor: pointer;
+}
+#iced:hover{
+    color:var(--teal);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#sliced {
+    font-family: 'Arvo', serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 25px 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    animation: ease-in-out;
+    background: whitesmoke;
+    box-shadow: 5px 5px 15px 5px rbga(255,255,255,.8);
+    color: var(--background);
+    cursor: pointer;
+}
+
+#sliced:hover{
+    color:var(--yellow);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#the-king{
+    position: relative;
 }

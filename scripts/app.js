@@ -74,20 +74,20 @@ const game = {
 
     sandoImgs: [
         {
-            src:"assets/images/sandwich-576531_640.png",
-            alt: "sandwich with meat vector",
+            src:"assets/images/club-sandwich.png",
+            alt: "club sandwich vector",
         },
         {
-            src:"https://i.ytimg.com/vi/yMYDRFzCCDw/maxresdefault.jpg",
-            alt:"spider pig",
+            src:"assets/images/sub.png",
+            alt:"sub sandwich vector",
         },
         {
-            src:"https://c4.wallpaperflare.com/wallpaper/578/626/344/movie-spider-man-into-the-spider-verse-miles-morales-spider-man-hd-wallpaper-preview.jpg",
-            alt: "Miles Morales",
+            src:"assets/images/elvis-sando.png",
+            alt: "elvis sandwich vector",
         },
         {
-            src:"assets/images/AdobeStock_296832508.jpeg",
-            alt:"Dagwood Sandwich",
+            src:"assets/images/dagwood-sando.png",
+            alt:"Dagwood Sandwich vector",
         },
     ],
 
@@ -141,11 +141,13 @@ const game = {
             $("#age-name").text("Submarine Sandwich");
         } else if
             (game.ageScore === 3) {
+            game.handleKing();
             $("#sando__img").attr("src", game.sandoImgs[2].src);
             $("#sando__img").attr("alt", game.sandoImgs[2].alt);
             $("#age-name").text("Elvis Sandwich");
         } else if
             (game.ageScore === 4) {
+            $("#the-king").toggle(false);
             $("#sando__img").attr("src", game.sandoImgs[3].src);
             $("#sando__img").attr("alt", game.sandoImgs[3].alt);
             $("#age-name").text("Dagwood Sandwich");
@@ -171,7 +173,7 @@ const game = {
     
 
     ageTimer(){
-        game.timer = setInterval(game.ageSando, 10000);
+        game.timer = setInterval(game.ageSando, 1000);
         console.log(game.timer);
     },
 
@@ -220,14 +222,11 @@ const game = {
     */
 
     handleKing(){
-        const $kinged = $("#kinged");
         const $theKing = $("#the-king");
         // const $kingPlay = game.sandoSounds[0].src;
         // $kingPlay.play();
-        $kinged.toggle(false);
         $theKing.toggle(false);
         if (game.ageScore === 3){
-            $kinged.toggle(true);
             $theKing.toggle(true);
         };
     },
@@ -254,9 +253,6 @@ const game = {
         };
     },
 
-    handleWinLose(){
-
-    },
 
 
     submitName(){
@@ -363,7 +359,6 @@ $("#sliced").on("click", game.handleSlice);
 $("#sliced").on("click", game.handleAge);
 
 $("#restart").on("click", game.startSando);
-
-$("#kinged").on("click", game.handleKing);
+$("#replay").on("click", game.startSando);
 
 
