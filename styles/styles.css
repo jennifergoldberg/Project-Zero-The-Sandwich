@@ -131,7 +131,7 @@ li{
 .game-over{
     z-index: 200;
     position: fixed;
-    background: url(file:///Users/jennifergoldberg/sei/projects/Project-Zero-The-Sandwich/assets/images/sandy-millar-6tF2unOGK1c-unsplash.jpg);
+    background: url(../assets/images/sandy-millar-6tF2unOGK1c-unsplash.jpg);
     top: 0;
     left: 0;
     width: 100%;
@@ -270,7 +270,7 @@ main {
 }
 
 .meter-feed{
-    background: url(file:///Users/jennifergoldberg/sei/projects/Project-Zero-The-Sandwich/assets/images/Wave-pink.svg);
+    background: url(../assets/images/Wave-pink.svg);
     border-radius: 100px;
     height: 30px;
     width: 250px;
@@ -284,7 +284,7 @@ main {
 } 
 
 .meter-iced{
-    background: url(file:///Users/jennifergoldberg/sei/projects/Project-Zero-The-Sandwich/assets/images/Wave-blue.svg);
+    background: url(../assets/images/Wave-blue.svg);
     border-radius: 100px;
     height: 30px;
     width: 250px;
@@ -298,7 +298,7 @@ main {
 }
 
 .meter-sliced{
-    background: url(file:///Users/jennifergoldberg/sei/projects/Project-Zero-The-Sandwich/assets/images/Wave-yellow.svg);
+    background: url(../assets/images/Wave-yellow.svg);
     border-radius: 100px;
     height: 30px;
     width: 250px;

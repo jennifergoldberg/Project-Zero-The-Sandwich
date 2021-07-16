@@ -12,19 +12,19 @@ const game = {
 
     sandoImgs: [
         {
-            src:"assets/images/club-sandwich.png",
+            src:"../assets/images/club-sandwich.png",
             alt: "club sandwich vector",
         },
         {
-            src:"assets/images/sub.png",
+            src:"../assets/images/sub.png",
             alt:"sub sandwich vector",
         },
         {
-            src:"assets/images/elvis-sando.png",
+            src:"../assets/images/elvis-sando.png",
             alt: "elvis sandwich vector",
         },
         {
-            src:"assets/images/dagwood-sando.png",
+            src:"../assets/images/dagwood-sando.png",
             alt:"Dagwood Sandwich vector",
         },
     ],
