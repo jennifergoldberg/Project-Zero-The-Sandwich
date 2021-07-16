@@ -123,22 +123,26 @@ const game = {
         //const $ageCount = $("#age-count");
         game.ageScore++;
         //$ageCount.text(` ${game.ageScore}`);
-        $(".age-progress").css("width", `${game.ageScore * 10}%`);
+        //$(".age-progress").css("width", `${game.ageScore * 20}%`);
         if (game.ageScore === 1){
             $("#sando__img").attr("src", game.sandoImgs[0].src);
             $("#sando__img").attr("alt", game.sandoImgs[0].alt);
+            $("#age-name").text("Club Sandwich");
                 } else if
                     (game.ageScore === 2){
                         $("#sando__img").attr("src", game.sandoImgs[1].src);
                         $("#sando__img").attr("alt", game.sandoImgs[1].alt);
+                        $("#age-name").text("Submarine Sandwich");
                     } else if
                         (game.ageScore === 3){
                             $("#sando__img").attr("src", game.sandoImgs[2].src);
                             $("#sando__img").attr("alt", game.sandoImgs[2].alt);
+                            $("#age-name").text("Evil Elvis");
                         } else if
                             (game.ageScore === 4){
                                 $("#sando__img").attr("src", game.sandoImgs[3].src);
                                 $("#sando__img").attr("alt", game.sandoImgs[3].alt);
+                                $("#age-name").text("Evil Monster Dagwood");
                             } else if
                                 (game.ageScore === 5){
                                     game.handleGameWon();
@@ -217,7 +221,6 @@ const game = {
             $gameWon.toggle(true);
             clearInterval(game.time);
             clearInterval(game.timer);
-
         };
     },
 

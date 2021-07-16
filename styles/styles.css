@@ -117,43 +117,42 @@ img{
     margin: 10px;
 }
 
+.meter-space{
+    margin: 30px 30px 0 0;
+}
+
 .metrics{
-    padding: 20 40px;
-    margin: 20 20px;
-    height: 400px;
+    padding: 0 5px;
+    height: 300px;
     width: 200px;
     }
 
 .metrics p{
-    padding: 10px 0;
-}    
+    margin: 10px 0 5px 0;
+}
 
 .meter-feed{
-    /* background: rgba(255,255,255,0.1); */
+    background: var(--lightpurple);
     border-radius: 100px;
-    padding: 20 5px;
-    height: 40px;
+    height: 30px;
     width: 250px;
 }
 
 .feed-progress{
-    /* box-shadow: 0 10px 40px -10px #fff; */
     border-radius: 100px;
     background: #fff;
     height: 30px;
     width: 0;
-}
+} 
 
 .meter-iced{
-    background: rgba(255,255,255,0.1);
+    background: var(--lightpurple);
     border-radius: 100px;
-    /* padding: 0 5px; */
-    height: 40px;
+    height: 30px;
     width: 250px;
 }
 
 .iced-progress{
-    box-shadow: 0 10px 40px -10px #fff;
     border-radius: 100px;
     background: #fff;
     height: 30px;
@@ -161,36 +160,32 @@ img{
 }
 
 .meter-sliced{
-    background: rgba(255,255,255,0.1);
+    background: var(--lightpurple);
     border-radius: 100px;
-    /* padding: 0 5px; */
-    height: 40px;
+    height: 30px;
     width: 250px;
 }
 
 .sliced-progress{
-    box-shadow: 0 10px 40px -10px #fff;
     border-radius: 100px;
     background: #fff;
     height: 30px;
     width: 0;
 }
 
-.meter-age{
-    background: rgba(255,255,255,0.1);
+/* .meter-age{
+    background: var(--lightpurple);
     border-radius: 100px;
-    /* padding: 0 5px; */
-    height: 40px;
+    height: 30px;
     width: 250px;
 }
 
 .age-progress{
-    box-shadow: 0 10px 40px -10px #fff;
     border-radius: 100px;
     background: #fff;
     height: 30px;
     width: 0;
-}
+}  */
 
 @keyframes load {
     0% { width: 0; }
@@ -212,20 +207,20 @@ img{
 
 footer {
     background-color: azure;
-    height: 20vh;
-    width: 100%;
+    height: 10vh;
     max-width: 900px;
     border-radius: 5px;
     margin-bottom: 20px;
     position: relative;
     display: flex;
     justify-content: space-evenly;
+    align-content: center;
     
 
 }
 
     #iced {
     padding: 5px 20px;
-    margin: 20px;
+    margin: 30px;
     color: pink;
 }
