@@ -40,10 +40,10 @@
                 </div>
             </div> 
             <div class="about-game">
-                <p>Click the buttons to take care of your sandwich and watch it age!</p>
+                <p>Click the buttons to take care of your sandwich and prevent it from <span>growing mold!</span></p>
                 <ul>
-                    <li>Feed your Sandwich by clicking <button>Feed</button> button</li>
-                    <li>Play with your Sandwich by clicking <button>Slice</button> button</li>
+                    <li>Feed your Sandwich by clicking the <button>Feed</button> button</li>
+                    <li>Play with your Sandwich by clicking the <button>Slice</button> button</li>
                     <li>Put your Sandwich to bed by clicking the <button>Ice</button> button</li>
                     <li>Keep an eye on the meter bars and don't let them reach zero!</li>
                 </ul>
@@ -80,28 +80,28 @@
 
         <div class="meter-space">
             <div class="metrics">
-                <p>Hunger:</p>
+                <p>Feed Meter:</p>
                 <div class="meter-feed">
                     <div class="feed-progress">
                         <span id="feed-count"></span>
                     </div>
                 </div>
 
-                <p>Sleep:</p>
+                <p>Iced Meter:</p>
                 <div class="meter-iced">
                     <div class="iced-progress">
                         <span id="iced-count"></span> 
                     </div>
                 </div>
 
-                <p>Boredom:</p> 
+                <p>Sliced Meter:</p> 
                 <div class="meter-sliced">
                     <div class="sliced-progress">
                         <span id="sliced-count"></span>
                     </div>
                 </div>
 
-                <p>Age:</p>
+                <p>Sandwich Age:</p>
                 <p id="age-name">Tea Sandwich</p>
                 <div class="meter-age">
                     <div class="age-progress">
@@ -117,7 +117,9 @@
             <button id="feed">Feed</button>
             <button id="iced">Ice</button>
             <button id="sliced">Slice</button>
+            <button id="kinged">King</button>
         </div>
+        <img id="the-king" class="animate__animated animate__wobble animate__infinite" src="assets/images/elvis-937618_1920.png" alt="Elvis Presley">
     </footer>
     
 </body>

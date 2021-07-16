@@ -68,8 +68,8 @@ const game = {
     icedScore: 10,
     slicedScore: 10,
     ageScore: 0,
-    time: null,
-    timer: null,
+    time: 0,
+    timer: 0,
 
 
     sandoImgs: [
@@ -86,12 +86,16 @@ const game = {
             alt: "Miles Morales",
         },
         {
-            src:"https://i.ytimg.com/vi/yMYDRFzCCDw/maxresdefault.jpg",
-            alt:"spider pig",
+            src:"assets/images/AdobeStock_296832508.jpeg",
+            alt:"Dagwood Sandwich",
         },
     ],
 
-
+    sandoSounds: [
+        {
+            src:"assets/sounds/zapsplat_cartoon_pop_high_pitched_002_64602.mp3",
+        }
+    ],
 
     handleHide(){
         const $cardBox = $(".card-box");
@@ -115,39 +119,41 @@ const game = {
         //$("#sliced-count").text(` ${game.slicedScore}`);
         $(".sliced-progress").css("width", `${game.slicedScore * 10}%`);
         game.handleGameOver();
-
+        console.log(game.feedScore);
     },
 
     ageSando(){
         //console.log("working");
         //const $ageCount = $("#age-count");
+        console.log(game.ageScore);
         game.ageScore++;
+        console.log(game.ageScore);
         //$ageCount.text(` ${game.ageScore}`);
         //$(".age-progress").css("width", `${game.ageScore * 20}%`);
         if (game.ageScore === 1){
             $("#sando__img").attr("src", game.sandoImgs[0].src);
             $("#sando__img").attr("alt", game.sandoImgs[0].alt);
             $("#age-name").text("Club Sandwich");
-                } else if
-                    (game.ageScore === 2){
-                        $("#sando__img").attr("src", game.sandoImgs[1].src);
-                        $("#sando__img").attr("alt", game.sandoImgs[1].alt);
-                        $("#age-name").text("Submarine Sandwich");
-                    } else if
-                        (game.ageScore === 3){
-                            $("#sando__img").attr("src", game.sandoImgs[2].src);
-                            $("#sando__img").attr("alt", game.sandoImgs[2].alt);
-                            $("#age-name").text("Evil Elvis");
-                        } else if
-                            (game.ageScore === 4){
-                                $("#sando__img").attr("src", game.sandoImgs[3].src);
-                                $("#sando__img").attr("alt", game.sandoImgs[3].alt);
-                                $("#age-name").text("Evil Monster Dagwood");
-                            } else if
-                                (game.ageScore > 4){
-                                    console.log("Game Over");
-                                    game.handleGameWon();
-                                }   
+        } else if
+            (game.ageScore === 2) {
+            $("#sando__img").attr("src", game.sandoImgs[1].src);
+            $("#sando__img").attr("alt", game.sandoImgs[1].alt);
+            $("#age-name").text("Submarine Sandwich");
+        } else if
+            (game.ageScore === 3) {
+            $("#sando__img").attr("src", game.sandoImgs[2].src);
+            $("#sando__img").attr("alt", game.sandoImgs[2].alt);
+            $("#age-name").text("Elvis Sandwich");
+        } else if
+            (game.ageScore === 4) {
+            $("#sando__img").attr("src", game.sandoImgs[3].src);
+            $("#sando__img").attr("alt", game.sandoImgs[3].alt);
+            $("#age-name").text("Dagwood Sandwich");
+        } else if
+            (game.ageScore > 4) {
+            console.log("Game Won");
+            game.handleGameWon();
+        }
     },
 
     clearScores(){
@@ -162,10 +168,12 @@ const game = {
     },
 
 
-    ageTimer(){
-        game.timer = setInterval(game.ageSando, 7000);
-    },
+    
 
+    ageTimer(){
+        game.timer = setInterval(game.ageSando, 10000);
+        console.log(game.timer);
+    },
 
     
     metricsTimer(){
@@ -206,8 +214,23 @@ const game = {
         -use same as start game
     */
 
+            /*
+        -add a button based on the age
+            -
+    */
 
-    
+    handleKing(){
+        const $kinged = $("#kinged");
+        const $theKing = $("#the-king");
+        // const $kingPlay = game.sandoSounds[0].src;
+        // $kingPlay.play();
+        $kinged.toggle(false);
+        $theKing.toggle(false);
+        if (game.ageScore === 3){
+            $kinged.toggle(true);
+            $theKing.toggle(true);
+        };
+    },
 
 
     handleGameOver(){
@@ -223,11 +246,16 @@ const game = {
     handleGameWon(){
         const $gameWon = $(".game-won");
         $gameWon.toggle(false);
-        if (game.age === 5) {
+        if (game.ageScore === 5) {
+            console.log("game won2");
             $gameWon.toggle(true);
             clearInterval(game.time);
             clearInterval(game.timer);
         };
+    },
+
+    handleWinLose(){
+
     },
 
 
@@ -279,6 +307,7 @@ const game = {
         game.clearScores();
         game.handleGameOver();
         game.handleGameWon();
+        game.handleKing();
 
 
     },
@@ -335,5 +364,6 @@ $("#sliced").on("click", game.handleAge);
 
 $("#restart").on("click", game.startSando);
 
+$("#kinged").on("click", game.handleKing);
 
 
