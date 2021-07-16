@@ -111,6 +111,7 @@ const game = {
             $gameOver.toggle(true);
             clearInterval(game.time);
             clearInterval(game.timer);
+            game.clearScores();
         };
     },
 
@@ -157,10 +158,10 @@ const game = {
     
 
     startSando(){
+        game.clearScores();
         game.handleHide();
         game.metricsTimer();
         game.ageTimer();
-        game.clearScores();
         game.handleGameOver();
         game.handleGameWon();
         game.handleKing();
