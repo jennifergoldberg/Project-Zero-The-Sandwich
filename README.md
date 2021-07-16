@@ -3,16 +3,11 @@
 
 ### The Sandwich
 
-The 
+The Sandwich is a classic game based of the Tamagotchi digital pet game. The goal of the game is to keep your Sandwich fed, cold, and sliced by clicking buttons before your Sandwich grows mold. I used various types of sandwiches to represent your pet to show the process of aging your Sandwich. You can win this game by keeping your Sandwich alive until it reaches its full maturity as a dagwood sandwich. 
 
+I used HTML, CCS, JavaScript, and jQuery to build the The Sandwich game. I had a lot of successes and failures with this project. I also had a lot of ideas to expand the site, which I did not get to imploy, but I plan to  continue working on this game. 
 
-- **A `README.md` file** with an explanation of what the project is and why you made it, your user stories, explanations of the technologies used, the approach taken, installation instructions, unsolved problems, the other components previously indicated (if applicable). In this project, also include your wireframes in the readme.
-- A 10 minute presentation to your classmates and instructor, illustrating:
-    - App functionality
-    - Triumphs
-    - Challenges
-    - Words of Wisdom
-    - Code snippets
+I have many unsolved problems based around building different levels with varying degrees of difficulty. I would like to continue to exlore solutions, so that when the Sandwich ages, it gets harder to meet its "needs". I also could not get the normalize.css file to link and had many issues with deployment. 
 
 
 ### User Story
@@ -43,7 +38,7 @@ The
 
 
 
-### Extras
+### Extras to Later Add
  - The user can feed their sandwitch by clicking the feedMe button that will randomly "feed" the sandwich one of three options: meat, cheese, and veggies (aka new hunger icons). 
 -  The feedMe button will randomly generate a evil tomato every X feeds that will kill the sandwitch with a olive on a toothpick
 - The hunger icons will appear at the top of the screen centered above the sandwitch and move vertically down the screen towards the sandwitch. 

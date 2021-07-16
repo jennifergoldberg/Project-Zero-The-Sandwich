@@ -86,7 +86,7 @@ const game = {
     
 
     ageTimer(){
-        game.timer = setInterval(game.ageSando, 30000);
+        game.timer = setInterval(game.ageSando, 7000);
     },
 
     
