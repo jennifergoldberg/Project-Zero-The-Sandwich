@@ -44,11 +44,15 @@ const game = {
         $(".iced-progress").css("width", `${game.icedScore * 10}%`);
         $(".sliced-progress").css("width", `${game.slicedScore * 10}%`);
         game.handleGameOver();
-        console.log(game.feedScore);
     },
 
     ageSando(){
         game.ageScore++;
+        if (game.ageScore === 0){
+            $("#sando__img").attr("src", "assets/images/tea-sandwich.png");
+            $("#sando__img").attr("alt", "Tea Sandwich");
+            $("#age-name").text("Tea Sandwich");
+        }
         if (game.ageScore === 1){
             $("#sando__img").attr("src", game.sandoImgs[0].src);
             $("#sando__img").attr("alt", game.sandoImgs[0].alt);
@@ -111,7 +115,6 @@ const game = {
             $gameOver.toggle(true);
             clearInterval(game.time);
             clearInterval(game.timer);
-            game.clearScores();
         };
     },
 
