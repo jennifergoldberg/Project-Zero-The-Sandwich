@@ -74,7 +74,7 @@ const game = {
 
     sandoImgs: [
         {
-            src:"images/sandwich-576531_640.png",
+            src:"assets/images/sandwich-576531_640.png",
             alt: "sandwich with meat vector",
         },
         {
@@ -144,7 +144,8 @@ const game = {
                                 $("#sando__img").attr("alt", game.sandoImgs[3].alt);
                                 $("#age-name").text("Evil Monster Dagwood");
                             } else if
-                                (game.ageScore === 5){
+                                (game.ageScore > 4){
+                                    console.log("Game Over");
                                     game.handleGameWon();
                                 }   
     },
@@ -204,6 +205,11 @@ const game = {
         -invoke in game over
         -use same as start game
     */
+
+
+    
+
+
     handleGameOver(){
         const $gameOver = $(".game-over");
         $gameOver.toggle(false);
