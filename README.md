@@ -34,7 +34,7 @@ The
     - The user can see sandwich's "needs" in a moving progress bar that is increased by the corresponding buttons
     - The progress bar starts at it's max and will reduce from by 1 every 1 second
     - As the user presses the Feed, Slice, or Ice buttons, the progress bar will increase to it's max
-7. The user will see the sandwich age into a more mature sandwich every 1 minute
+7. The user will see the sandwich age into a more mature sandwich every 30 seconds
     - The sandwich will start as a Tea Sandwich and mature until it reaches the Dagwood Sandwich
 8. If the user does not meet the "needs" of the sandwich, the sandwich will get modly and the game will be over
     - Mold will appear

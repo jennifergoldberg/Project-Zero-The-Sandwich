@@ -229,8 +229,9 @@ header {
 }
 
 h1 {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-left: 20px;
+    margin-top: 50px;
 }
 
 
@@ -251,7 +252,7 @@ main {
     max-width: 300px;
     margin: 10px;
     border-radius: 20px;
-    border: 10px dotted #42128d;
+    border: 10px solid #42128d;
 }
 
 .meter-space{
